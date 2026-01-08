@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | Cleryn Global Software</title>
+    <meta name="robots" content="noindex, nofollow" />
+      <link rel="shortcut icon" href="/public/images/company-logo.jpg" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="public/site.css" />
+    <style>
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+        background: #0b1220;
+      }
+
+      .glass {
+        background: rgba(2, 59, 109, 0.35);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .ring-soft {
+        box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+      }
+
+      .page-hero {
+        background: radial-gradient(
+            900px 420px at 16% 35%,
+            rgba(0, 166, 235, 0.18),
+            transparent 60%
+          ),
+          radial-gradient(
+            900px 420px at 80% 30%,
+            rgba(2, 59, 109, 0.55),
+            transparent 60%
+          ),
+          linear-gradient(180deg, rgba(11, 18, 32, 0.1), rgba(11, 18, 32, 0.95));
+      }
+    </style>
+  </head>
+
+  <body class="text-white">
+    <header class="fixed inset-x-0 top-0 z-50">
+      <div class="glass">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="flex h-16 items-center justify-between">
+            <a
+              href="index.html"
+              class="flex items-center gap-3"
+              aria-label="Cleryn Global Software Home"
+            >
+              <img
+                src="public/images/company-logo.jpg"
+                alt="Cleryn Global Software"
+                class="h-10 w-10 rounded-lg ring-soft object-cover"
+              />
+              <div class="leading-tight">
+                <div class="text-sm font-semibold">Cleryn Global Software</div>
+                <div class="text-xs text-white/70">Private Limited</div>
+              </div>
+            </a>
+
+            <nav
+              class="hidden lg:flex items-center gap-7 text-sm"
+              aria-label="Primary navigation"
+            >
+              <a
+                class="text-white/80 hover:text-white transition"
+                href="about.html"
+                >Company</a
+              >
+              <a
+                class="text-white hover:text-white transition"
+                href="services.html"
+                >Services</a
+              >
+              <a
+                class="text-white/80 hover:text-white transition"
+                href="technology.html"
+                >Technology</a
+              >
+              <a
+                class="text-white/80 hover:text-white transition"
+                href="portfolio.html"
+                >Portfolio</a
+              >
+              <a
+                class="text-white/80 hover:text-white transition"
+                href="contact.html"
+                >Contact</a
+              >
+            </nav>
+
+            <div class="flex items-center gap-3">
+              <a
+                href="contact.html"
+                class="hidden sm:inline-flex items-center justify-center rounded-xl bg-[#00a6eb] px-4 py-2 text-sm font-semibold text-white hover:bg-[#00b4ff] transition"
+                >Get Quote</a
+              >
+              <button
+                id="mobileMenuBtn"
+                class="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 ring-soft hover:bg-white/10 transition"
+                aria-label="Open menu"
+                aria-expanded="false"
+                aria-controls="mobileMenu"
+              >
+                <svg
+                  class="h-5 w-5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4 7h16M4 12h16M4 17h16"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="mobileMenu" class="hidden lg:hidden glass">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
+          <div class="grid gap-2 text-sm">
+            <a
+              class="rounded-xl px-3 py-2 text-white/80 hover:text-white hover:bg-white/5 transition"
+              href="about.html"
+              >Company</a
+            >
+            <a
+              class="rounded-xl px-3 py-2 text-white hover:bg-white/5 transition"
+              href="services.html"
+              >Services</a
+            >
+            <a
+              class="rounded-xl px-3 py-2 text-white/80 hover:text-white hover:bg-white/5 transition"
+              href="technology.html"
+              >Technology</a
+            >
+            <a
+              class="rounded-xl px-3 py-2 text-white/80 hover:text-white hover:bg-white/5 transition"
+              href="portfolio.html"
+              >Portfolio</a
+            >
+            <a
+              class="rounded-xl px-3 py-2 text-white/80 hover:text-white hover:bg-white/5 transition"
+              href="contact.html"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="pt-16">
+      <section class="page-hero" data-reveal>
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+          <div
+            class="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-6"
+          >
+            <div>
+              <div
+                class="text-sm font-semibold text-[#00a6eb] inline-flex items-center gap-2"
+              >
+                <svg
+                  class="h-4 w-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 6v6l4 2"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                </svg>
+                Services
+              </div>
+              <h1
+                class="mt-3 text-4xl sm:text-5xl font-extrabold tracking-tight"
+              >
+                What we offer
+              </h1>
+              <p class="mt-4 text-white/70 max-w-2xl">
+                Choose a single service or combine multiple for end-to-end
+                delivery.
+              </p>
+            </div>
+            <a
+              href="contact.html"
+              class="inline-flex items-center justify-center rounded-xl bg-[#00a6eb] px-6 py-3 font-semibold text-white hover:bg-[#00b4ff] transition"
+              >Get Quote</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="py-14" data-reveal>
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <article class="rounded-3xl bg-white/5 ring-soft p-6 card-hover">
+              <div
+                class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-white/5 ring-soft text-[#00a6eb]"
+              >
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 2a4 4 0 014 4v2h1a2 2 0 012 2v4a2 2 0 01-2 2h-1v2a4 4 0 11-8 0v-2H7a2 2 0 01-2-2v-4a2 2 0 012-2h1V6a4 4 0 014-4z"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10 12h4"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="mt-4 text-sm font-semibold text-[#00a6eb]">
+                AI Solutions
+              </div>
+              <h2 class="mt-2 text-xl font-extrabold">Smart automation</h2>
+              <p class="mt-2 text-sm text-white/70">
+                Chatbots, automation, analytics, and AI-powered workflows.
+              </p>
+              <div class="mt-4 text-xs text-white/60">
+                What we do: discovery → prototyping → implementation
+              </div>
+            </article>
+            <article class="rounded-3xl bg-white/5 ring-soft p-6 card-hover">
+              <div
+                class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-white/5 ring-soft text-[#00a6eb]"
+              >
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4 5h16v14H4V5z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                  />
+                  <path d="M4 9h16" stroke="currentColor" stroke-width="2" />
+                  <path
+                    d="M8 21h8"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="mt-4 text-sm font-semibold text-[#00a6eb]">
+                Web Applications
+              </div>
+              <h2 class="mt-2 text-xl font-extrabold">Modern web products</h2>
+              <p class="mt-2 text-sm text-white/70">
+                React/Node apps, admin dashboards, portals, and landing pages.
+              </p>
+              <div class="mt-4 text-xs text-white/60">
+                Focus: performance, security, SEO
+              </div>
+            </article>
+            <article class="rounded-3xl bg-white/5 ring-soft p-6 card-hover">
+              <div
+                class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-white/5 ring-soft text-[#00a6eb]"
+              >
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M8 2h8a2 2 0 012 2v16a2 2 0 01-2 2H8a2 2 0 01-2-2V4a2 2 0 012-2z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M11 19h2"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="mt-4 text-sm font-semibold text-[#00a6eb]">
+                Mobile Applications
+              </div>
+              <h2 class="mt-2 text-xl font-extrabold">Android & iOS</h2>
+              <p class="mt-2 text-sm text-white/70">
+                Cross-platform apps, native-like UX, and stable releases.
+              </p>
+              <div class="mt-4 text-xs text-white/60">
+                Deliverables: UI, API integration, store release
+              </div>
+            </article>
+            <article class="rounded-3xl bg-white/5 ring-soft p-6 card-hover">
+              <div
+                class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-white/5 ring-soft text-[#00a6eb]"
+              >
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4 21V7l8-4 8 4v14"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M9 21V9h6v12"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="mt-4 text-sm font-semibold text-[#00a6eb]">
+                Enterprise Solutions
+              </div>
+              <h2 class="mt-2 text-xl font-extrabold">Systems that scale</h2>
+              <p class="mt-2 text-sm text-white/70">
+                ERP modules, automation, role-based access, integrations.
+              </p>
+              <div class="mt-4 text-xs text-white/60">
+                Architecture: modular and maintainable
+              </div>
+            </article>
+            <article class="rounded-3xl bg-white/5 ring-soft p-6 card-hover">
+              <div
+                class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-white/5 ring-soft text-[#00a6eb]"
+              >
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4 11V7a2 2 0 012-2h3"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M20 13v4a2 2 0 01-2 2h-3"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M8 12l9-5-5 9-1.5-4L8 12z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="mt-4 text-sm font-semibold text-[#00a6eb]">
+                Digital Marketing
+              </div>
+              <h2 class="mt-2 text-xl font-extrabold">Growth & SEO</h2>
+              <p class="mt-2 text-sm text-white/70">
+                SEO, performance optimization, and conversion improvements.
+              </p>
+              <div class="mt-4 text-xs text-white/60">
+                Goal: traffic → leads → revenue
+              </div>
+            </article>
+            <article class="rounded-3xl bg-white/5 ring-soft p-6 card-hover">
+              <div
+                class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-white/5 ring-soft text-[#00a6eb]"
+              >
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M6 7h12M6 12h12M6 17h6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M4 5a2 2 0 012-2h8l6 6v13a2 2 0 01-2 2H6a2 2 0 01-2-2V5z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="mt-4 text-sm font-semibold text-[#00a6eb]">
+                GST & Billing
+              </div>
+              <h2 class="mt-2 text-xl font-extrabold">
+                Business-ready workflows
+              </h2>
+              <p class="mt-2 text-sm text-white/70">
+                Billing systems, invoicing modules, reporting dashboards.
+              </p>
+              <div class="mt-4 text-xs text-white/60">Reliable & auditable</div>
+            </article>
+          </div>
+
+          <div
+            class="mt-10 rounded-3xl bg-[#023b6d]/60 ring-soft p-8 lg:p-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
+            data-reveal
+          >
+            <div>
+              <div class="text-sm font-semibold text-[#00a6eb]">
+                Service details
+              </div>
+              <h3 class="mt-2 text-2xl font-extrabold">
+                Want a dedicated service page for each item?
+              </h3>
+              <p class="mt-2 text-white/70">
+                We can add separate pages later without changing the design
+                system.
+              </p>
+            </div>
+            <a
+              href="contact.html"
+              class="inline-flex items-center justify-center rounded-xl bg-[#00a6eb] px-6 py-3 font-semibold text-white hover:bg-[#00b4ff] transition"
+              >Contact Us</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer-wow border-t border-white/10" data-reveal>
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="pt-10">
+            <div
+              class="h-px w-full bg-gradient-to-r from-transparent via-[#00a6eb]/60 to-transparent"
+              aria-hidden="true"
+            ></div>
+          </div>
+
+          <div class="py-10 grid gap-8 lg:grid-cols-4">
+            <div>
+              <div class="flex items-center gap-4">
+                <div class="logo-wow rounded-2xl bg-white/5 ring-soft p-2">
+                  <img
+                    src="public/images/company-logo.jpg"
+                    alt="Cleryn Global Software"
+                    class="h-14 w-14 rounded-xl object-cover"
+                  />
+                </div>
+                <div>
+                  <div class="text-base font-extrabold">
+                    Cleryn Global Software
+                  </div>
+                  <div class="text-sm text-white/60">Private Limited</div>
+                </div>
+              </div>
+              <p class="mt-4 text-sm text-white/70 max-w-sm">
+                We build modern websites, apps, and business software with a
+                premium UI and dependable engineering.
+              </p>
+            </div>
+
+            <div>
+              <div class="text-sm font-bold text-white">Quick Links</div>
+              <ul class="mt-4 grid gap-2 text-sm">
+                <li>
+                  <a
+                    class="footer-link text-white/70 hover:text-white transition"
+                    href="index.html"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="footer-link text-white/70 hover:text-white transition"
+                    href="about.html"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="footer-link text-white/70 hover:text-white transition"
+                    href="services.html"
+                    >Services</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="footer-link text-white/70 hover:text-white transition"
+                    href="technology.html"
+                    >Technology</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="footer-link text-white/70 hover:text-white transition"
+                    href="portfolio.html"
+                    >Portfolio</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="footer-link text-white/70 hover:text-white transition"
+                    href="contact.html"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="text-sm font-bold text-white">Services</div>
+              <ul class="mt-4 grid gap-2 text-sm text-white/70">
+                <li>Web Development</li>
+                <li>App Development</li>
+                <li>E-commerce & CMS</li>
+                <li>Business Software</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="text-sm font-bold text-white">Contact</div>
+              <div class="mt-4 grid gap-2 text-sm text-white/70">
+                <div>
+                  <span class="text-white/50">Email:</span> 
+                  clerynglobalsoftwareprivatelim@gmail.com
+                </div>
+                <div>
+                  <span class="text-white/50">Phone:</span> +91-7439113017
+                </div>
+                <div><span class="text-white/50">Location:</span> The nearest Maa Mangal Chandi Bhaban to Garia Station is located at Srinagar, Dhalua, Panchsyar Main Road, Panchasayar, Kolkata - 700094 (Panchpota), a short distance from Garia Railway Station and New Garia Metro</div>
+              </div>
+              <a
+                href="contact.html"
+                class="mt-5 inline-flex items-center justify-center rounded-xl bg-[#00a6eb] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#00b4ff] transition"
+                >Get a Quote</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="border-t border-white/10 py-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-white/60"
+          >
+            <div>
+              © <span id="year"></span> Cleryn Global Software Private Limited.
+              All rights reserved.
+            </div>
+            <div class="text-white/50">
+              Company • Services • Technology • Portfolio • Contact
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="public/site.js" defer></script>
+  </body>
+</html>

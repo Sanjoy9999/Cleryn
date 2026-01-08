@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cleryn Global Software Private Limited</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link
+      rel="shortcut icon"
+      href="/public/images/company-logo.jpg"
+      type="image/x-icon"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="public/site.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+        background: #0b1220;
+      }
+
+      .glass {
+        background: rgba(2, 59, 109, 0.35);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .hero-bg {
+        background: radial-gradient(
+            900px 400px at 18% 20%,
+            rgba(0, 166, 235, 0.2),
+            transparent 60%
+          ),
+          radial-gradient(
+            900px 420px at 80% 30%,
+            rgba(2, 59, 109, 0.55),
+            transparent 60%
+          ),
+          linear-gradient(180deg, rgba(11, 18, 32, 0.2), rgba(11, 18, 32, 0.95));
+      }
+
+      .ring-soft {
+        box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+      }
+
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  </head>
+
+  <body class="text-white">
+    <header class="fixed inset-x-0 top-0 z-50">
+      <div class="glass">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="flex h-16 items-center justify-between">
+            <a
+              href="index.html"
+              class="flex items-center gap-3"
+              aria-label="Cleryn Global Software Home"
+            >
+              <img
+                src="public/images/company-logo.jpg"
+                alt="Cleryn Global Software"
+                class="h-10 w-10 rounded-lg ring-soft object-cover"
+              />
+              <div class="leading-tight">
+                <div class="text-sm font-semibold">Cleryn Global Software</div>
+                <div class="text-xs text-white/70">Private Limited</div>
+              </div>
+            </a>
+
+            <nav
+              class="hidden lg:flex items-center gap-7 text-sm"
+              aria-label="Primary navigation"
+            >
+              <a
+                class="text-white/80 hover:text-white transition"
+                href="about.html"
+                >Company</a
+              >
+              <a
+                class="text-white/80 hover:text-white transition"
+                href="services.html"
+                >Services</a
+              >
+              <a
+                class="text-white/80 hover:text-white transition"
+                href="technology.html"
+                >Technology</a
+              >
+              <a
+                class="text-white/80 hover:text-white transition"
+                href="portfolio.html"
+                >Portfolio</a
+              >
+              <a
+                class="text-white/80 hover:text-white transition"
+                href="contact.html"
+                >Contact</a
+              >
+            </nav>
+
+            <div class="flex items-center gap-3">
+              <a
+                href="contact.html"
+                class="hidden sm:inline-flex items-center justify-center rounded-xl bg-[#00a6eb] px-4 py-2 text-sm font-semibold text-white hover:bg-[#00b4ff] transition"
+                >Get Quote</a
+              >
+
+              <button
+                id="mobileMenuBtn"
+                class="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 ring-soft hover:bg-white/10 transition"
+                aria-label="Open menu"
+                aria-expanded="false"
+                aria-controls="mobileMenu"
+              >
+                <svg
+                  class="h-5 w-5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4 7h16M4 12h16M4 17h16"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="mobileMenu" class="hidden lg:hidden glass">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
+          <div class="grid gap-2 text-sm">
+            <a
+              class="rounded-xl px-3 py-2 text-white/80 hover:text-white hover:bg-white/5 transition"
+              href="about.html"
+              >Company</a
+            >
+            <a
+              class="rounded-xl px-3 py-2 text-white/80 hover:text-white hover:bg-white/5 transition"
+              href="services.html"
+              >Services</a
+            >
+            <a
+              class="rounded-xl px-3 py-2 text-white/80 hover:text-white hover:bg-white/5 transition"
+              href="technology.html"
+              >Technology</a
+            >
+            <a
+              class="rounded-xl px-3 py-2 text-white/80 hover:text-white hover:bg-white/5 transition"
+              href="portfolio.html"
+              >Portfolio</a
+            >
+            <a
+              class="rounded-xl px-3 py-2 text-white/80 hover:text-white hover:bg-white/5 transition"
+              href="contact.html"
+              >Contact</a
+            >
+            <a
+              class="mt-2 inline-flex items-center justify-center rounded-xl bg-[#00a6eb] px-4 py-2 text-sm font-semibold text-white hover:bg-[#00b4ff] transition"
+              href="contact.html"
+              >Get Quote</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <main class="pt-16">
+      <section class="hero-bg" data-reveal>
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+          <div class="grid lg:grid-cols-2 gap-10 items-center">
+            <div>
+              <div
+                class="inline-flex items-center gap-2 rounded-full bg-white/5 ring-soft px-4 py-2 text-xs text-white/80"
+              >
+                <span class="h-2 w-2 rounded-full bg-[#00a6eb]"></span>
+                Modern software, AI solutions, and digital growth
+              </div>
+              <h1
+                class="mt-6 text-4xl sm:text-5xl font-extrabold tracking-tight"
+              >
+                Build <span class="text-[#00a6eb]">modern</span> products your
+                clients love.
+              </h1>
+              <p
+                class="mt-5 text-white/70 text-base sm:text-lg leading-relaxed"
+              >
+                Cleryn Global Software Private Limited delivers AI solutions,
+                web applications, mobile apps, enterprise solutions, and digital
+                marketing—built for performance, scalability, and real business
+                impact.
+              </p>
+
+              <div class="mt-8 flex flex-col sm:flex-row gap-3">
+                <a
+                  href="contact.html"
+                  class="inline-flex items-center justify-center rounded-xl bg-[#00a6eb] px-6 py-3 font-semibold text-white hover:bg-[#00b4ff] transition"
+                >
+                  Get Quote
+                </a>
+                <a
+                  href="services.html"
+                  class="inline-flex items-center justify-center rounded-xl bg-white/5 ring-soft px-6 py-3 font-semibold text-white hover:bg-white/10 transition"
+                >
+                  Explore Services
+                </a>
+              </div>
+
+              <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4">
+                <div class="rounded-2xl bg-white/5 ring-soft p-4 card-hover">
+                  <div class="text-2xl font-extrabold">10+</div>
+                  <div class="text-xs text-white/60">Projects Delivered</div>
+                </div>
+                <div class="rounded-2xl bg-white/5 ring-soft p-4 card-hover">
+                  <div class="text-2xl font-extrabold">24/7</div>
+                  <div class="text-xs text-white/60">Support</div>
+                </div>
+                <div class="rounded-2xl bg-white/5 ring-soft p-4 card-hover">
+                  <div class="text-2xl font-extrabold">QA</div>
+                  <div class="text-xs text-white/60">Quality First</div>
+                </div>
+                <div class="rounded-2xl bg-white/5 ring-soft p-4 card-hover">
+                  <div class="text-2xl font-extrabold">Fast</div>
+                  <div class="text-xs text-white/60">Delivery</div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="rounded-3xl bg-white/5 ring-soft overflow-hidden card-hover"
+              data-reveal
+            >
+              <div class="p-6 sm:p-8">
+                <div class="flex items-center gap-3">
+                  <span
+                    class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-white/5 ring-soft text-[#00a6eb]"
+                  >
+                    <svg
+                      class="h-6 w-6"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M12 2l3.5 7 7.5 1-5.5 5.3 1.4 7.7L12 19.8 5.1 23 6.5 15.3 1 10l7.5-1L12 2z"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <div>
+                    <div class="text-sm font-semibold">Highlights</div>
+                    <div class="text-xs text-white/60">
+                      No carousel — clean & premium
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-6 grid gap-4">
+                  <div
+                    class="flex items-start gap-3 rounded-2xl bg-white/5 ring-soft p-4"
+                  >
+                    <span
+                      class="mt-0.5 inline-flex h-9 w-9 items-center justify-center rounded-xl bg-white/5 ring-soft text-[#00a6eb]"
+                    >
+                      <svg
+                        class="h-5 w-5"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M4 12l6 6L20 6"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    <div>
+                      <div class="font-bold">Premium UI + performance</div>
+                      <div class="mt-1 text-sm text-white/70">
+                        Fast pages, clear layouts, and scalable structure.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="flex items-start gap-3 rounded-2xl bg-white/5 ring-soft p-4"
+                  >
+                    <span
+                      class="mt-0.5 inline-flex h-9 w-9 items-center justify-center rounded-xl bg-white/5 ring-soft text-[#00a6eb]"
+                    >
+                      <svg
+                        class="h-5 w-5"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M12 3v18M3 12h18"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </span>
+                    <div>
+                      <div class="font-bold">AI + automation ready</div>
+                      <div class="mt-1 text-sm text-white/70">
+                        Smart features that improve accuracy and speed.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="flex items-start gap-3 rounded-2xl bg-white/5 ring-soft p-4"
+                  >
+                    <span
+                      class="mt-0.5 inline-flex h-9 w-9 items-center justify-center rounded-xl bg-white/5 ring-soft text-[#00a6eb]"
+                    >
+                      <svg
+                        class="h-5 w-5"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M12 7v5l3 3"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </span>
+                    <div>
+                      <div class="font-bold">
+                        Fast delivery, clear milestones
+                      </div>
+                      <div class="mt-1 text-sm text-white/70">
+                        Weekly progress and transparent communication.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="border-t border-white/10 p-5 flex flex-col sm:flex-row gap-3"
+              >
+                <a
+                  href="about.html"
+                  class="inline-flex items-center justify-center rounded-xl bg-white/5 ring-soft px-5 py-2.5 text-sm font-semibold text-white hover:bg-white/10 transition"
+                  >Company</a
+                >
+                <a
+                  href="technology.html"
+                  class="inline-flex items-center justify-center rounded-xl bg-white/5 ring-soft px-5 py-2.5 text-sm font-semibold text-white hover:bg-white/10 transition"
+                  >Technology</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Overview -->
+      <section class="py-14" data-reveal>
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="flex items-end justify-between gap-6">
+            <div>
+              <h2
+                class="text-2xl sm:text-3xl font-extrabold flex items-center gap-3"
+              >
+                <span
+                  class="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white/5 ring-soft text-[#00a6eb]"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 2l3 5 6 .8-4.4 4 1.2 6.2L12 16.8 6.2 18l1.2-6.2L3 7.8 9 7l3-5z"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                Services
+              </h2>
+              <p class="mt-2 text-white/70">
+                A complete suite for building, scaling, and marketing your
+                product.
+              </p>
+            </div>
+            <a
+              href="services.html"
+              class="hidden sm:inline-flex items-center justify-center rounded-xl bg-white/5 ring-soft px-4 py-2 text-sm font-semibold hover:bg-white/10 transition"
+              >View all</a
+            >
+          </div>
+
+          <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div class="rounded-3xl bg-white/5 ring-soft p-6 card-hover">
+              <div class="text-sm font-semibold text-[#00a6eb]">
+                AI Solutions
+              </div>
+              <div class="mt-2 text-lg font-bold">
+                Automation & intelligence
+              </div>
+              <p class="mt-2 text-sm text-white/70">
+                Use AI to accelerate decisions, reduce costs, and improve
+                customer experience.
+              </p>
+            </div>
+            <div class="rounded-3xl bg-white/5 ring-soft p-6 card-hover">
+              <div class="text-sm font-semibold text-[#00a6eb]">
+                Web Applications
+              </div>
+              <div class="mt-2 text-lg font-bold">Fast, secure, scalable</div>
+              <p class="mt-2 text-sm text-white/70">
+                Modern web apps designed for performance, SEO, and conversion.
+              </p>
+            </div>
+            <div class="rounded-3xl bg-white/5 ring-soft p-6 card-hover">
+              <div class="text-sm font-semibold text-[#00a6eb]">
+                Mobile Applications
+              </div>
+              <div class="mt-2 text-lg font-bold">iOS & Android</div>
+              <p class="mt-2 text-sm text-white/70">
+                Build elegant experiences with native-like speed and
+                reliability.
+              </p>
+            </div>
+            <div class="rounded-3xl bg-white/5 ring-soft p-6 card-hover">
+              <div class="text-sm font-semibold text-[#00a6eb]">
+                Enterprise Solutions
+              </div>
+              <div class="mt-2 text-lg font-bold">Process to platform</div>
+              <p class="mt-2 text-sm text-white/70">
+                Digitize operations with robust systems and clean integrations.
+              </p>
+            </div>
+            <div class="rounded-3xl bg-white/5 ring-soft p-6 card-hover">
+              <div class="text-sm font-semibold text-[#00a6eb]">
+                Digital Marketing
+              </div>
+              <div class="mt-2 text-lg font-bold">SEO & growth</div>
+              <p class="mt-2 text-sm text-white/70">
+                Rank better, convert more, and turn traffic into revenue.
+              </p>
+            </div>
+            <div class="rounded-3xl bg-white/5 ring-soft p-6 card-hover">
+              <div class="text-sm font-semibold text-[#00a6eb]">
+                GST & Billing
+              </div>
+              <div class="mt-2 text-lg font-bold">Business-ready tools</div>
+              <p class="mt-2 text-sm text-white/70">
+                Reliable billing workflows, invoicing, and GST-ready systems.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Us -->
+      <section class="py-14" data-reveal>
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div
+            class="rounded-3xl bg-gradient-to-r from-[#023b6d]/60 to-[#00a6eb]/25 ring-soft p-8 lg:p-10"
+          >
+            <div class="grid lg:grid-cols-2 gap-10 items-center">
+              <div>
+                <h2
+                  class="text-2xl sm:text-3xl font-extrabold flex items-center gap-3"
+                >
+                  <span
+                    class="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white/5 ring-soft text-[#00a6eb]"
+                  >
+                    <svg
+                      class="h-6 w-6"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M12 2l8 4v6c0 5-3.5 9.5-8 10-4.5-.5-8-5-8-10V6l8-4z"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M9 12l2 2 4-4"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  Why choose Cleryn?
+                </h2>
+                <p class="mt-3 text-white/75">
+                  We mix clean engineering with business thinking—so your
+                  product looks premium and performs reliably.
+                </p>
+              </div>
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div class="rounded-2xl bg-white/5 ring-soft p-5 card-hover">
+                  <div class="font-bold">Quality Assurance</div>
+                  <div class="mt-1 text-sm text-white/70">
+                    Structured testing and review workflow.
+                  </div>
+                </div>
+                <div class="rounded-2xl bg-white/5 ring-soft p-5 card-hover">
+                  <div class="font-bold">Customized Solutions</div>
+                  <div class="mt-1 text-sm text-white/70">
+                    Built around your goals, not templates.
+                  </div>
+                </div>
+                <div class="rounded-2xl bg-white/5 ring-soft p-5 card-hover">
+                  <div class="font-bold">Fast Delivery</div>
+                  <div class="mt-1 text-sm text-white/70">
+                    Milestone-based delivery with clarity.
+                  </div>
+                </div>
+                <div class="rounded-2xl bg-white/5 ring-soft p-5 card-hover">
+                  <div class="font-bold">Client Satisfaction</div>
+                  <div class="mt-1 text-sm text-white/70">
+                    Transparent updates and long-term support.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technologies -->
+      <section class="py-14" data-reveal>
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div>
+            <h2
+              class="text-2xl sm:text-3xl font-extrabold flex items-center gap-3"
+            >
+              <span
+                class="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white/5 ring-soft text-[#00a6eb]"
+              >
+                <svg
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M9 3h6v3H9V3zM6 9h3v6H6V9zM15 9h3v6h-3V9zM9 18h6v3H9v-3z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              Technologies we use
+            </h2>
+            <p class="mt-2 text-white/70">Modern stacks for modern outcomes.</p>
+          </div>
+          <div class="mt-8 overflow-x-auto no-scrollbar">
+            <div class="min-w-[720px] grid grid-cols-6 gap-4">
+              <div
+                class="rounded-2xl bg-white/5 ring-soft p-4 text-center text-sm font-semibold card-hover"
+              >
+                AI/ML
+              </div>
+              <div
+                class="rounded-2xl bg-white/5 ring-soft p-4 text-center text-sm font-semibold card-hover"
+              >
+                React
+              </div>
+              <div
+                class="rounded-2xl bg-white/5 ring-soft p-4 text-center text-sm font-semibold card-hover"
+              >
+                Node.js
+              </div>
+              <div
+                class="rounded-2xl bg-white/5 ring-soft p-4 text-center text-sm font-semibold card-hover"
+              >
+                Next.js
+              </div>
+              <div
+                class="rounded-2xl bg-white/5 ring-soft p-4 text-center text-sm font-semibold card-hover"
+              >
+                MongoDB
+              </div>
+              <div
+                class="rounded-2xl bg-white/5 ring-soft p-4 text-center text-sm font-semibold card-hover"
+              >
+                Postgres
+              </div>
+              <div
+                class="rounded-2xl bg-white/5 ring-soft p-4 text-center text-sm font-semibold card-hover"
+              >
+                MySQL
+              </div>
+              <div
+                class="rounded-2xl bg-white/5 ring-soft p-4 text-center text-sm font-semibold card-hover"
+              >
+                React Native
+              </div>
+              <div
+                class="rounded-2xl bg-white/5 ring-soft p-4 text-center text-sm font-semibold card-hover"
+              >
+                Flutter
+              </div>
+              <div
+                class="rounded-2xl bg-white/5 ring-soft p-4 text-center text-sm font-semibold card-hover"
+              >
+                PHP
+              </div>
+              <div
+                class="rounded-2xl bg-white/5 ring-soft p-4 text-center text-sm font-semibold card-hover"
+              >
+                Laravel
+              </div>
+              <div
+                class="rounded-2xl bg-white/5 ring-soft p-4 text-center text-sm font-semibold card-hover"
+              >
+                WordPress
+              </div>
+            </div>
+          </div>
+          <div class="mt-6">
+            <a
+              href="technology.html"
+              class="inline-flex items-center justify-center rounded-xl bg-white/5 ring-soft px-4 py-2 text-sm font-semibold hover:bg-white/10 transition"
+              >Explore Technology</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="py-14" data-reveal>
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="flex items-end justify-between gap-6">
+            <div>
+              <h2
+                class="text-2xl sm:text-3xl font-extrabold flex items-center gap-3"
+              >
+                <span
+                  class="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white/5 ring-soft text-[#00a6eb]"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M7 8h10M7 12h6M6 20l-2 2V6a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H8l-2 2z"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </span>
+                What clients say
+              </h2>
+              <p class="mt-2 text-white/70">
+                Replace these testimonials with your real reviews later.
+              </p>
+            </div>
+          </div>
+          <div class="mt-8 grid lg:grid-cols-3 gap-5">
+            <figure class="rounded-3xl bg-white/5 ring-soft p-6 card-hover">
+              <div class="flex items-start justify-between gap-4">
+                <div
+                  class="flex gap-1 text-amber-400"
+                  aria-label="5 star review"
+                >
+                  <svg
+                    class="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.956a1 1 0 00.95.69h4.159c.969 0 1.371 1.24.588 1.81l-3.366 2.446a1 1 0 00-.364 1.118l1.286 3.956c.3.921-.755 1.688-1.539 1.118l-3.366-2.446a1 1 0 00-1.176 0l-3.366 2.446c-.783.57-1.838-.197-1.539-1.118l1.286-3.956a1 1 0 00-.364-1.118L2.367 9.383c-.783-.57-.38-1.81.588-1.81h4.159a1 1 0 00.95-.69l1.286-3.956z"
+                    />
+                  </svg>
+                  <svg
+                    class="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.956a1 1 0 00.95.69h4.159c.969 0 1.371 1.24.588 1.81l-3.366 2.446a1 1 0 00-.364 1.118l1.286 3.956c.3.921-.755 1.688-1.539 1.118l-3.366-2.446a1 1 0 00-1.176 0l-3.366 2.446c-.783.57-1.838-.197-1.539-1.118l1.286-3.956a1 1 0 00-.364-1.118L2.367 9.383c-.783-.57-.38-1.81.588-1.81h4.159a1 1 0 00.95-.69l1.286-3.956z"
+                    />
+                  </svg>
+                  <svg
+                    class="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.956a1 1 0 00.95.69h4.159c.969 0 1.371 1.24.588 1.81l-3.366 2.446a1 1 0 00-.364 1.118l1.286 3.956c.3.921-.755 1.688-1.539 1.118l-3.366-2.446a1 1 0 00-1.176 0l-3.366 2.446c-.783.57-1.838-.197-1.539-1.118l1.286-3.956a1 1 0 00-.364-1.118L2.367 9.383c-.783-.57-.38-1.81.588-1.81h4.159a1 1 0 00.95-.69l1.286-3.956z"
+                    />
+                  </svg>
+                  <svg
+                    class="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.956a1 1 0 00.95.69h4.159c.969 0 1.371 1.24.588 1.81l-3.366 2.446a1 1 0 00-.364 1.118l1.286 3.956c.3.921-.755 1.688-1.539 1.118l-3.366-2.446a1 1 0 00-1.176 0l-3.366 2.446c-.783.57-1.838-.197-1.539-1.118l1.286-3.956a1 1 0 00-.364-1.118L2.367 9.383c-.783-.57-.38-1.81.588-1.81h4.159a1 1 0 00.95-.69l1.286-3.956z"
+                    />
+                  </svg>
+                  <svg
+                    class="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.956a1 1 0 00.95.69h4.159c.969 0 1.371 1.24.588 1.81l-3.366 2.446a1 1 0 00-.364 1.118l1.286 3.956c.3.921-.755 1.688-1.539 1.118l-3.366-2.446a1 1 0 00-1.176 0l-3.366 2.446c-.783.57-1.838-.197-1.539-1.118l1.286-3.956a1 1 0 00-.364-1.118L2.367 9.383c-.783-.57-.38-1.81.588-1.81h4.159a1 1 0 00.95-.69l1.286-3.956z"
+                    />
+                  </svg>
+                </div>
+
+                <span class="text-[#00a6eb]" aria-hidden="true">
+                  <svg
+                    class="h-10 w-10 opacity-70"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M7 7h6v6H9l-2 4V7z"
+                      fill="currentColor"
+                      opacity="0.35"
+                    />
+                    <path
+                      d="M14 7h6v6h-4l-2 4V7z"
+                      fill="currentColor"
+                      opacity="0.35"
+                    />
+                  </svg>
+                </span>
+              </div>
+
+              <blockquote class="mt-5 text-sm text-white/80 leading-relaxed">
+                I will stick forever with them! Team was available, always
+                polite, knowledgeable, always replied on time to queries!
+                Overachieved the work and expectations. Immediately rehiring
+                them! 10/10.
+              </blockquote>
+
+              <div
+                class="mt-6 h-px w-full bg-white/10"
+                aria-hidden="true"
+              ></div>
+
+              <figcaption class="mt-6 flex items-center gap-4">
+                <div
+                  class="h-12 w-12 rounded-full bg-white/10 ring-soft flex items-center justify-center overflow-hidden"
+                >
+                  <svg
+                    class="h-8 w-8 text-white/60"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 12a4 4 0 100-8 4 4 0 000 8z"
+                      fill="currentColor"
+                      opacity="0.35"
+                    />
+                    <path
+                      d="M4 20a8 8 0 0116 0"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      opacity="0.5"
+                    />
+                  </svg>
+                </div>
+                <div class="leading-tight">
+                  <div class="font-semibold">Youssuf</div>
+                  <div class="text-xs text-white/60">Dublin, Denmark</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="rounded-3xl bg-white/5 ring-soft p-6 card-hover">
+              <div class="flex items-start justify-between gap-4">
+                <div
+                  class="flex gap-1 text-amber-400"
+                  aria-label="5 star review"
+                >
+                  <svg
+                    class="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.956a1 1 0 00.95.69h4.159c.969 0 1.371 1.24.588 1.81l-3.366 2.446a1 1 0 00-.364 1.118l1.286 3.956c.3.921-.755 1.688-1.539 1.118l-3.366-2.446a1 1 0 00-1.176 0l-3.366 2.446c-.783.57-1.838-.197-1.539-1.118l1.286-3.956a1 1 0 00-.364-1.118L2.367 9.383c-.783-.57-.38-1.81.588-1.81h4.159a1 1 0 00.95-.69l1.286-3.956z"
+                    />
+                  </svg>
+                  <svg
+                    class="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.956a1 1 0 00.95.69h4.159c.969 0 1.371 1.24.588 1.81l-3.366 2.446a1 1 0 00-.364 1.118l1.286 3.956c.3.921-.755 1.688-1.539 1.118l-3.366-2.446a1 1 0 00-1.176 0l-3.366 2.446c-.783.57-1.838-.197-1.539-1.118l1.286-3.956a1 1 0 00-.364-1.118L2.367 9.383c-.783-.57-.38-1.81.588-1.81h4.159a1 1 0 00.95-.69l1.286-3.956z"
+                    />
+                  </svg>
+                  <svg
+                    class="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.956a1 1 0 00.95.69h4.159c.969 0 1.371 1.24.588 1.81l-3.366 2.446a1 1 0 00-.364 1.118l1.286 3.956c.3.921-.755 1.688-1.539 1.118l-3.366-2.446a1 1 0 00-1.176 0l-3.366 2.446c-.783.57-1.838-.197-1.539-1.118l1.286-3.956a1 1 0 00-.364-1.118L2.367 9.383c-.783-.57-.38-1.81.588-1.81h4.159a1 1 0 00.95-.69l1.286-3.956z"
+                    />
+                  </svg>
+                  <svg
+                    class="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.956a1 1 0 00.95.69h4.159c.969 0 1.371 1.24.588 1.81l-3.366 2.446a1 1 0 00-.364 1.118l1.286 3.956c.3.921-.755 1.688-1.539 1.118l-3.366-2.446a1 1 0 00-1.176 0l-3.366 2.446c-.783.57-1.838-.197-1.539-1.118l1.286-3.956a1 1 0 00-.364-1.118L2.367 9.383c-.783-.57-.38-1.81.588-1.81h4.159a1 1 0 00.95-.69l1.286-3.956z"
+                    />
+                  </svg>
+                  <svg
+                    class="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.956a1 1 0 00.95.69h4.159c.969 0 1.371 1.24.588 1.81l-3.366 2.446a1 1 0 00-.364 1.118l1.286 3.956c.3.921-.755 1.688-1.539 1.118l-3.366-2.446a1 1 0 00-1.176 0l-3.366 2.446c-.783.57-1.838-.197-1.539-1.118l1.286-3.956a1 1 0 00-.364-1.118L2.367 9.383c-.783-.57-.38-1.81.588-1.81h4.159a1 1 0 00.95-.69l1.286-3.956z"
+                    />
+                  </svg>
+                </div>
+
+                <span class="text-[#00a6eb]" aria-hidden="true">
+                  <svg
+                    class="h-10 w-10 opacity-70"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M7 7h6v6H9l-2 4V7z"
+                      fill="currentColor"
+                      opacity="0.35"
+                    />
+                    <path
+                      d="M14 7h6v6h-4l-2 4V7z"
+                      fill="currentColor"
+                      opacity="0.35"
+                    />
+                  </svg>
+                </span>
+              </div>
+
+              <blockquote class="mt-5 text-sm text-white/80 leading-relaxed">
+                Best programmer I have ever worked with. Convergent Infoware and
+                his crew did everything how I wanted it, we had great
+                communication and they delivered on budget. Will definitely work
+                with again!
+              </blockquote>
+
+              <div
+                class="mt-6 h-px w-full bg-white/10"
+                aria-hidden="true"
+              ></div>
+
+              <figcaption class="mt-6 flex items-center gap-4">
+                <div
+                  class="h-12 w-12 rounded-full bg-white/10 ring-soft flex items-center justify-center overflow-hidden"
+                >
+                  <svg
+                    class="h-8 w-8 text-white/60"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 12a4 4 0 100-8 4 4 0 000 8z"
+                      fill="currentColor"
+                      opacity="0.35"
+                    />
+                    <path
+                      d="M4 20a8 8 0 0116 0"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      opacity="0.5"
+                    />
+                  </svg>
+                </div>
+                <div class="leading-tight">
+                  <div class="font-semibold">Andreas Paulsen</div>
+                  <div class="text-xs text-white/60">Bærum, Norway</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="rounded-3xl bg-white/5 ring-soft p-6 card-hover">
+              <div class="flex items-start justify-between gap-4">
+                <div
+                  class="flex gap-1 text-amber-400"
+                  aria-label="5 star review"
+                >
+                  <svg
+                    class="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.956a1 1 0 00.95.69h4.159c.969 0 1.371 1.24.588 1.81l-3.366 2.446a1 1 0 00-.364 1.118l1.286 3.956c.3.921-.755 1.688-1.539 1.118l-3.366-2.446a1 1 0 00-1.176 0l-3.366 2.446c-.783.57-1.838-.197-1.539-1.118l1.286-3.956a1 1 0 00-.364-1.118L2.367 9.383c-.783-.57-.38-1.81.588-1.81h4.159a1 1 0 00.95-.69l1.286-3.956z"
+                    />
+                  </svg>
+                  <svg
+                    class="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.956a1 1 0 00.95.69h4.159c.969 0 1.371 1.24.588 1.81l-3.366 2.446a1 1 0 00-.364 1.118l1.286 3.956c.3.921-.755 1.688-1.539 1.118l-3.366-2.446a1 1 0 00-1.176 0l-3.366 2.446c-.783.57-1.838-.197-1.539-1.118l1.286-3.956a1 1 0 00-.364-1.118L2.367 9.383c-.783-.57-.38-1.81.588-1.81h4.159a1 1 0 00.95-.69l1.286-3.956z"
+                    />
+                  </svg>
+                  <svg
+                    class="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.956a1 1 0 00.95.69h4.159c.969 0 1.371 1.24.588 1.81l-3.366 2.446a1 1 0 00-.364 1.118l1.286 3.956c.3.921-.755 1.688-1.539 1.118l-3.366-2.446a1 1 0 00-1.176 0l-3.366 2.446c-.783.57-1.838-.197-1.539-1.118l1.286-3.956a1 1 0 00-.364-1.118L2.367 9.383c-.783-.57-.38-1.81.588-1.81h4.159a1 1 0 00.95-.69l1.286-3.956z"
+                    />
+                  </svg>
+                  <svg
+                    class="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.956a1 1 0 00.95.69h4.159c.969 0 1.371 1.24.588 1.81l-3.366 2.446a1 1 0 00-.364 1.118l1.286 3.956c.3.921-.755 1.688-1.539 1.118l-3.366-2.446a1 1 0 00-1.176 0l-3.366 2.446c-.783.57-1.838-.197-1.539-1.118l1.286-3.956a1 1 0 00-.364-1.118L2.367 9.383c-.783-.57-.38-1.81.588-1.81h4.159a1 1 0 00.95-.69l1.286-3.956z"
+                    />
+                  </svg>
+                  <svg
+                    class="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.956a1 1 0 00.95.69h4.159c.969 0 1.371 1.24.588 1.81l-3.366 2.446a1 1 0 00-.364 1.118l1.286 3.956c.3.921-.755 1.688-1.539 1.118l-3.366-2.446a1 1 0 00-1.176 0l-3.366 2.446c-.783.57-1.838-.197-1.539-1.118l1.286-3.956a1 1 0 00-.364-1.118L2.367 9.383c-.783-.57-.38-1.81.588-1.81h4.159a1 1 0 00.95-.69l1.286-3.956z"
+                    />
+                  </svg>
+                </div>
+
+                <span class="text-[#00a6eb]" aria-hidden="true">
+                  <svg
+                    class="h-10 w-10 opacity-70"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M7 7h6v6H9l-2 4V7z"
+                      fill="currentColor"
+                      opacity="0.35"
+                    />
+                    <path
+                      d="M14 7h6v6h-4l-2 4V7z"
+                      fill="currentColor"
+                      opacity="0.35"
+                    />
+                  </svg>
+                </span>
+              </div>
+
+              <blockquote class="mt-5 text-sm text-white/80 leading-relaxed">
+                These guys are great. From my initial project description, they
+                came back with a ten page, detailed proposal. They were in
+                contact with me daily regarding updates, questions, and
+                concerns.
+              </blockquote>
+
+              <div
+                class="mt-6 h-px w-full bg-white/10"
+                aria-hidden="true"
+              ></div>
+
+              <figcaption class="mt-6 flex items-center gap-4">
+                <div
+                  class="h-12 w-12 rounded-full bg-white/10 ring-soft flex items-center justify-center overflow-hidden"
+                >
+                  <svg
+                    class="h-8 w-8 text-white/60"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 12a4 4 0 100-8 4 4 0 000 8z"
+                      fill="currentColor"
+                      opacity="0.35"
+                    />
+                    <path
+                      d="M4 20a8 8 0 0116 0"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      opacity="0.5"
+                    />
+                  </svg>
+                </div>
+                <div class="leading-tight">
+                  <div class="font-semibold">Purtell</div>
+                  <div class="text-xs text-white/60">United States</div>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="py-14" data-reveal>
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div
+            class="rounded-3xl bg-[#023b6d]/60 ring-soft p-8 lg:p-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
+          >
+            <div>
+              <div class="text-sm font-semibold text-[#00a6eb]">Let’s talk</div>
+              <h3 class="mt-2 text-2xl font-extrabold">
+                Got a project idea? We’ll help you ship it.
+              </h3>
+              <p class="mt-2 text-white/70">
+                Share requirements, timeline, and budget—get a clear plan and
+                quote.
+              </p>
+            </div>
+            <a
+              href="contact.html"
+              class="inline-flex items-center justify-center rounded-xl bg-[#00a6eb] px-6 py-3 font-semibold text-white hover:bg-[#00b4ff] transition"
+              >Contact Us</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer-wow border-t border-white/10" data-reveal>
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="pt-10">
+            <div
+              class="h-px w-full bg-gradient-to-r from-transparent via-[#00a6eb]/60 to-transparent"
+              aria-hidden="true"
+            ></div>
+          </div>
+
+          <div class="py-10 grid gap-8 lg:grid-cols-4">
+            <div>
+              <div class="flex items-center gap-4">
+                <div class="logo-wow rounded-2xl bg-white/5 ring-soft p-2">
+                  <img
+                    src="public/images/company-logo.jpg"
+                    alt="Cleryn Global Software"
+                    class="h-14 w-14 rounded-xl object-cover"
+                  />
+                </div>
+                <div>
+                  <div class="text-base font-extrabold">
+                    Cleryn Global Software
+                  </div>
+                  <div class="text-sm text-white/60">Private Limited</div>
+                </div>
+              </div>
+              <p class="mt-4 text-sm text-white/70 max-w-sm">
+                We build modern websites, apps, and business software with a
+                premium UI and dependable engineering.
+              </p>
+            </div>
+
+            <div>
+              <div class="text-sm font-bold text-white">Quick Links</div>
+              <ul class="mt-4 grid gap-2 text-sm">
+                <li>
+                  <a
+                    class="footer-link text-white/70 hover:text-white transition"
+                    href="index.html"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="footer-link text-white/70 hover:text-white transition"
+                    href="about.html"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="footer-link text-white/70 hover:text-white transition"
+                    href="services.html"
+                    >Services</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="footer-link text-white/70 hover:text-white transition"
+                    href="technology.html"
+                    >Technology</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="footer-link text-white/70 hover:text-white transition"
+                    href="portfolio.html"
+                    >Portfolio</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="footer-link text-white/70 hover:text-white transition"
+                    href="contact.html"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="text-sm font-bold text-white">Services</div>
+              <ul class="mt-4 grid gap-2 text-sm text-white/70">
+                <li>Web Development</li>
+                <li>App Development</li>
+                <li>E-commerce & CMS</li>
+                <li>Business Software</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="text-sm font-bold text-white">Contact</div>
+              <div class="mt-4 grid gap-2 text-sm text-white/70">
+                <div>
+                  <span class="text-white/50">Email:</span>
+                  clerynglobalsoftwareprivatelim@gmail.com
+                </div>
+                <div>
+                  <span class="text-white/50">Phone:</span> +91-7439113017
+                </div>
+                <div>
+                  <span class="text-white/50">Location:</span> The nearest Maa
+                  Mangal Chandi Bhaban to Garia Station is located at Srinagar,
+                  Dhalua, Panchsyar Main Road, Panchasayar, Kolkata - 700094
+                  (Panchpota), a short distance from Garia Railway Station and
+                  New Garia Metro
+                </div>
+              </div>
+              <a
+                href="contact.html"
+                class="mt-5 inline-flex items-center justify-center rounded-xl bg-[#00a6eb] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#00b4ff] transition"
+                >Get a Quote</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="border-t border-white/10 py-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-white/60"
+          >
+            <div>
+              © <span id="year"></span> Cleryn Global Software Private Limited.
+              All rights reserved.
+            </div>
+            <div class="text-white/50">
+              Company • Services • Technology • Portfolio • Contact
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="public/site.js" defer></script>
+  </body>
+</html>

@@ -71,7 +71,7 @@
                   data && data.details
                     ? " Details: " + String(data.details)
                     : "";
-                var err = new Error(msg + extra);
+                var err = new Error(msg + extra + details);
                 err.status = res.status;
                 err.details = data && data.details ? data.details : "";
                 throw err;
@@ -92,7 +92,9 @@
             window.console.error("Contact form error:", err);
           }
           alert(
-            "Failed to send message. Please try again later or contact us by phone/email."
+            err && err.message
+              ? err.message
+              : "Failed to send message. Please try again later or contact us by phone/email."
           );
         })
         .finally(function () {

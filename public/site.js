@@ -1,6 +1,68 @@
 (function () {
   "use strict";
 
+  function initSimpleIcons() {
+    var nodes = Array.prototype.slice.call(
+      document.querySelectorAll("[data-si]")
+    );
+    if (!nodes.length) return;
+
+    var cache = initSimpleIcons._cache;
+    if (!cache) {
+      cache = new Map();
+      initSimpleIcons._cache = cache;
+    }
+
+    function getIconSvg(slug) {
+      if (!slug) return Promise.reject(new Error("Missing slug"));
+      if (cache.has(slug)) return cache.get(slug);
+
+      var url =
+        "https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/" +
+        encodeURIComponent(String(slug)) +
+        ".svg";
+
+      var p = fetch(url)
+        .then(function (res) {
+          if (!res.ok) throw new Error("Icon fetch failed: " + slug);
+          return res.text();
+        })
+        .then(function (svgText) {
+          return svgText;
+        });
+
+      cache.set(slug, p);
+      return p;
+    }
+
+    nodes.forEach(function (host) {
+      var slug = host.getAttribute("data-si");
+      var color = host.getAttribute("data-color");
+      var label = host.getAttribute("data-label") || "";
+
+      if (color) host.style.color = color;
+
+      getIconSvg(slug)
+        .then(function (svgText) {
+          var template = document.createElement("template");
+          template.innerHTML = svgText.trim();
+          var svg = template.content.querySelector("svg");
+          if (!svg) return;
+
+          svg.setAttribute("aria-hidden", "true");
+          svg.setAttribute("focusable", "false");
+          if (label) svg.setAttribute("aria-label", label);
+          svg.classList.add("h-full", "w-full");
+
+          host.textContent = "";
+          host.appendChild(svg);
+        })
+        .catch(function () {
+          // If CDN fails, keep existing content (or empty) without breaking the UI.
+        });
+    });
+  }
+
   var mobileMenuBtn = document.getElementById("mobileMenuBtn");
   var mobileMenu = document.getElementById("mobileMenu");
   if (mobileMenuBtn && mobileMenu) {
@@ -97,6 +159,8 @@
   }
 
   initContactForm();
+
+  initSimpleIcons();
 
   var targets = Array.prototype.slice.call(
     document.querySelectorAll("[data-reveal]")

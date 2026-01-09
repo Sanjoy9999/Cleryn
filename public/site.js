@@ -14,46 +14,25 @@
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
-  function initEmailJsContactForm() {
+  function initContactForm() {
     var form = document.getElementById("contactForm");
     if (!form) return;
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      if (!window.emailjs) {
-        alert("Email service is not loaded yet. Please refresh and try again.");
+      var website = form.querySelector('input[name="website"]');
+      if (website && String(website.value || "").trim()) {
+        // Honeypot filled => treat as spam.
+        form.reset();
+        alert("Message sent successfully. We will contact you soon.");
         return;
-      }
-
-      var publicKey = form.getAttribute("data-emailjs-public-key") || "";
-      var serviceId = form.getAttribute("data-emailjs-service-id") || "";
-      var templateId = form.getAttribute("data-emailjs-template-id") || "";
-
-      if (!publicKey || !serviceId || !templateId) {
-        alert(
-          "EmailJS is not configured. Add your PUBLIC KEY, SERVICE ID, and TEMPLATE ID in the contact form."
-        );
-        return;
-      }
-
-      try {
-        if (typeof window.emailjs.init === "function") {
-          // EmailJS browser SDK v4 supports init({ publicKey })
-          try {
-            window.emailjs.init({ publicKey: publicKey });
-          } catch (err) {
-            // Fallback for older signature
-            window.emailjs.init(publicKey);
-          }
-        }
-      } catch (err) {
-        // continue; sendForm may still work if already initialized
       }
 
       var submitBtn = form.querySelector(
         'button[type="submit"], input[type="submit"]'
       );
+
       var prevText = submitBtn ? submitBtn.textContent : "";
       if (submitBtn) {
         submitBtn.disabled = true;
@@ -61,8 +40,25 @@
         submitBtn.textContent = "Sending...";
       }
 
-      window.emailjs
-        .sendForm(serviceId, templateId, form)
+      var payload = {
+        from_name: (form.querySelector('[name="from_name"]') || {}).value || "",
+        from_email:
+          (form.querySelector('[name="from_email"]') || {}).value || "",
+        phone: (form.querySelector('[name="phone"]') || {}).value || "",
+        message: (form.querySelector('[name="message"]') || {}).value || "",
+      };
+
+      fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      })
+        .then(function (res) {
+          if (!res.ok) throw new Error("Request failed");
+          return res.json().catch(function () {
+            return { ok: true };
+          });
+        })
         .then(function () {
           alert("Message sent successfully. We will contact you soon.");
           form.reset();
@@ -81,7 +77,7 @@
     });
   }
 
-  initEmailJsContactForm();
+  initContactForm();
 
   var targets = Array.prototype.slice.call(
     document.querySelectorAll("[data-reveal]")

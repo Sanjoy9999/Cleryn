@@ -1,0 +1,35 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Local notes / scratch
+note.txt
+
+# Netlify local dev
+.netlify/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+
+# Node tooling (if used locally)
+node_modules/
+.npm/
+.yarn/
+.pnp*
+
+# Build output (if you add bundling later)
+dist/
+build/

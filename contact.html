@@ -3,15 +3,83 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact | Cleryn Global Software</title>
-    <meta name="robots" content="noindex, nofollow" />
-    <link
-      rel="shortcut icon"
-      href="/public/images/company-logo.jpg"
-      type="image/x-icon"
+    <title>Contact | Cleryn Global Software Pvt Ltd</title>
+    <meta
+      name="description"
+      content="Contact Cleryn Global Software Private Limited (Pvt Ltd) for AI solutions, web & mobile app development, enterprise software, and digital marketing. Get a clear plan and quote."
     />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta
+      name="keywords"
+      content="Cleryn, Cleryn Global, Cleryn Global Software, Cleryn Global Software Private Limited, contact, quote"
+    />
+    <meta
+      name="robots"
+      content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
+    />
+    <meta
+      name="googlebot"
+      content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
+    />
+
+    <meta property="og:site_name" content="Cleryn Global Software" />
+    <meta
+      property="og:title"
+      content="Contact | Cleryn Global Software Pvt Ltd"
+    />
+    <meta
+      property="og:description"
+      content="Contact us for AI solutions, web & mobile app development, enterprise software, and digital marketing."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://clerynglobalsoftwarepvtltd.netlify.app/contact.html"
+    />
+    <meta property="og:image" content="public/images/company-logo.jpg" />
+
+    <link
+      rel="canonical"
+      href="https://clerynglobalsoftwarepvtltd.netlify.app/contact.html"
+    />
+
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="Contact | Cleryn Global Software Pvt Ltd"
+    />
+    <meta
+      name="twitter:description"
+      content="Contact us for AI solutions, web & mobile app development, and enterprise software."
+    />
+    <meta name="twitter:image" content="public/images/company-logo.jpg" />
+
+    <link rel="icon" href="public/images/company-logo.jpg" type="image/jpeg" />
+
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin />
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+    <link rel="preload" href="public/site.css" as="style" />
     <link rel="stylesheet" href="public/site.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Cleryn Global Software Private Limited",
+        "legalName": "Cleryn Global Software Private Limited",
+        "alternateName": [
+          "Cleryn",
+          "Cleryn Global",
+          "Cleryn Global Software",
+          "Cleryn Global Software Pvt Ltd",
+          "Cleryn global software private pvt ltd"
+        ],
+        "logo": "public/images/company-logo.jpg"
+      }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
       body {
         margin: 0;
@@ -60,6 +128,8 @@
               <img
                 src="public/images/company-logo.jpg"
                 alt="Cleryn Global Software"
+                width="40"
+                height="40"
                 class="h-10 w-10 rounded-lg ring-soft object-cover"
               />
               <div class="leading-tight">
@@ -261,8 +331,18 @@
 
               <div class="mt-8 rounded-2xl bg-white/5 ring-soft p-6 card-hover">
                 <div class="text-sm font-semibold">Map</div>
-                <div class="mt-3 text-sm text-white/60">
-                  Optional: embed Google Maps here later.
+                <div
+                  class="mt-3 text-sm text-white/60 overflow-hidden rounded-xl"
+                >
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d5852.585072287743!2d88.40564730360222!3d22.470479560844144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjLCsDI4JzEyLjYiTiA4OMKwMjQnMTguNyJF!5e0!3m2!1sen!2sin!4v1767939232879!5m2!1sen!2sin"
+                    width="600"
+                    height="450"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
                 </div>
               </div>
             </div>
@@ -294,13 +374,16 @@
                 </span>
                 Send a message
               </h2>
-              <form
-                id="contactForm"
-                class="mt-6 grid gap-4"
-                data-emailjs-public-key="YOUR_EMAILJS_PUBLIC_KEY"
-                data-emailjs-service-id="YOUR_EMAILJS_SERVICE_ID"
-                data-emailjs-template-id="YOUR_EMAILJS_TEMPLATE_ID"
-              >
+              <form id="contactForm" class="mt-6 grid gap-4">
+                <label class="hidden" aria-hidden="true">
+                  <span>Website</span>
+                  <input
+                    type="text"
+                    name="website"
+                    tabindex="-1"
+                    autocomplete="off"
+                  />
+                </label>
                 <div class="grid sm:grid-cols-2 gap-4">
                   <label class="grid gap-2">
                     <span class="text-sm text-white/70">Name</span>
@@ -371,6 +454,9 @@
                   <img
                     src="public/images/company-logo.jpg"
                     alt="Cleryn Global Software"
+                    width="56"
+                    height="56"
+                    loading="lazy"
                     class="h-14 w-14 rounded-xl object-cover"
                   />
                 </div>
@@ -485,11 +571,6 @@
         </div>
       </footer>
     </main>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-      defer
-    ></script>
     <script src="public/site.js" defer></script>
   </body>
 </html>

@@ -54,16 +54,38 @@
         body: JSON.stringify(payload),
       })
         .then(function (res) {
-          if (!res.ok) throw new Error("Request failed");
-          return res.json().catch(function () {
-            return { ok: true };
-          });
+          return res
+            .json()
+            .catch(function () {
+              return {};
+            })
+            .then(function (data) {
+              if (!res.ok) {
+                var msg =
+                  (data && (data.error || data.message)) || "Request failed";
+                var extra =
+                  data && data.missing && data.missing.length
+                    ? " Missing: " + data.missing.join(", ")
+                    : "";
+                var err = new Error(msg + extra);
+                err.status = res.status;
+                throw err;
+              }
+              return data;
+            });
         })
         .then(function () {
           alert("Message sent successfully. We will contact you soon.");
           form.reset();
         })
-        .catch(function () {
+        .catch(function (err) {
+          if (
+            window &&
+            window.console &&
+            typeof window.console.error === "function"
+          ) {
+            window.console.error("Contact form error:", err);
+          }
           alert(
             "Failed to send message. Please try again later or contact us by phone/email."
           );

@@ -15,6 +15,23 @@ function json(statusCode, body, extraHeaders = {}) {
 }
 
 exports.handler = async (event) => {
+  // Basic CORS handling (useful if you later serve from a custom domain)
+  const allowedOrigin = process.env.ALLOWED_ORIGIN;
+  const origin = event.headers.origin || event.headers.Origin || "";
+  const corsOrigin = allowedOrigin || origin || "*";
+
+  if (event.httpMethod === "OPTIONS") {
+    return {
+      statusCode: 204,
+      headers: {
+        "Access-Control-Allow-Origin": corsOrigin,
+        "Access-Control-Allow-Headers": "Content-Type",
+        "Access-Control-Allow-Methods": "POST, OPTIONS",
+      },
+      body: "",
+    };
+  }
+
   if (event.httpMethod !== "POST") {
     return json(
       405,
@@ -25,8 +42,6 @@ exports.handler = async (event) => {
 
   // Optional: restrict who can call this endpoint
   // Set ALLOWED_ORIGIN to your production origin, e.g. https://www.example.com
-  const allowedOrigin = process.env.ALLOWED_ORIGIN;
-  const origin = event.headers.origin || event.headers.Origin || "";
   if (allowedOrigin && origin && origin !== allowedOrigin) {
     return json(403, { ok: false, error: "Forbidden" });
   }
@@ -57,7 +72,16 @@ exports.handler = async (event) => {
   const user_id = process.env.EMAILJS_PUBLIC_KEY;
 
   if (!service_id || !template_id || !user_id) {
-    return json(500, { ok: false, error: "Email service is not configured" });
+    const missing = [];
+    if (!service_id) missing.push("EMAILJS_SERVICE_ID");
+    if (!template_id) missing.push("EMAILJS_TEMPLATE_ID");
+    if (!user_id) missing.push("EMAILJS_PUBLIC_KEY");
+
+    return json(500, {
+      ok: false,
+      error: "Email service is not configured",
+      missing,
+    });
   }
 
   const emailjsBody = {
@@ -80,7 +104,23 @@ exports.handler = async (event) => {
     });
 
     if (!res.ok) {
-      return json(502, { ok: false, error: "Email provider error" });
+      let details = "";
+      try {
+        details = await res.text();
+      } catch {
+        details = "";
+      }
+
+      console.error("EmailJS error", {
+        status: res.status,
+        details: details ? details.slice(0, 500) : "",
+      });
+
+      return json(502, {
+        ok: false,
+        error: "Email provider error",
+        status: res.status,
+      });
     }
 
     return json(200, { ok: true });

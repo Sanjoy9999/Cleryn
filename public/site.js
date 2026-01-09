@@ -18,11 +18,23 @@
     var form = document.getElementById("contactForm");
     if (!form) return;
 
+    function encodeForm(data) {
+      return Object.keys(data)
+        .map(function (key) {
+          return (
+            encodeURIComponent(key) +
+            "=" +
+            encodeURIComponent(String(data[key]))
+          );
+        })
+        .join("&");
+    }
+
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      var website = form.querySelector('input[name="website"]');
-      if (website && String(website.value || "").trim()) {
+      var botField = form.querySelector('input[name="bot-field"]');
+      if (botField && String(botField.value || "").trim()) {
         // Honeypot filled => treat as spam.
         form.reset();
         alert("Message sent successfully. We will contact you soon.");
@@ -41,6 +53,8 @@
       }
 
       var payload = {
+        "form-name": form.getAttribute("name") || "contact",
+        "bot-field": "",
         from_name: (form.querySelector('[name="from_name"]') || {}).value || "",
         from_email:
           (form.querySelector('[name="from_email"]') || {}).value || "",
@@ -48,36 +62,14 @@
         message: (form.querySelector('[name="message"]') || {}).value || "",
       };
 
-      fetch("/api/contact", {
+      fetch("/", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encodeForm(payload),
       })
         .then(function (res) {
-          return res
-            .json()
-            .catch(function () {
-              return {};
-            })
-            .then(function (data) {
-              if (!res.ok) {
-                var msg =
-                  (data && (data.error || data.message)) || "Request failed";
-                var extra =
-                  data && data.missing && data.missing.length
-                    ? " Missing: " + data.missing.join(", ")
-                    : "";
-                var details =
-                  data && data.details
-                    ? " Details: " + String(data.details)
-                    : "";
-                var err = new Error(msg + extra + details);
-                err.status = res.status;
-                err.details = data && data.details ? data.details : "";
-                throw err;
-              }
-              return data;
-            });
+          if (!res.ok) throw new Error("Request failed");
+          return res.text();
         })
         .then(function () {
           alert("Message sent successfully. We will contact you soon.");
@@ -92,9 +84,7 @@
             window.console.error("Contact form error:", err);
           }
           alert(
-            err && err.message
-              ? err.message
-              : "Failed to send message. Please try again later or contact us by phone/email."
+            "Failed to send message. Please try again later or contact us by phone/email."
           );
         })
         .finally(function () {

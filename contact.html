@@ -374,12 +374,20 @@
                 </span>
                 Send a message
               </h2>
-              <form id="contactForm" class="mt-6 grid gap-4">
+              <form
+                id="contactForm"
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+                class="mt-6 grid gap-4"
+              >
+                <input type="hidden" name="form-name" value="contact" />
                 <label class="hidden" aria-hidden="true">
-                  <span>Website</span>
+                  <span>Do not fill</span>
                   <input
                     type="text"
-                    name="website"
+                    name="bot-field"
                     tabindex="-1"
                     autocomplete="off"
                   />

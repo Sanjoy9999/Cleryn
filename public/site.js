@@ -67,8 +67,13 @@
                   data && data.missing && data.missing.length
                     ? " Missing: " + data.missing.join(", ")
                     : "";
+                var details =
+                  data && data.details
+                    ? " Details: " + String(data.details)
+                    : "";
                 var err = new Error(msg + extra);
                 err.status = res.status;
+                err.details = data && data.details ? data.details : "";
                 throw err;
               }
               return data;

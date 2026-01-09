@@ -70,6 +70,7 @@ exports.handler = async (event) => {
   const service_id = process.env.EMAILJS_SERVICE_ID;
   const template_id = process.env.EMAILJS_TEMPLATE_ID;
   const user_id = process.env.EMAILJS_PUBLIC_KEY;
+  const accessToken = process.env.EMAILJS_PRIVATE_KEY;
 
   if (!service_id || !template_id || !user_id) {
     const missing = [];
@@ -96,6 +97,12 @@ exports.handler = async (event) => {
     },
   };
 
+  // If you set EMAILJS_PRIVATE_KEY in Netlify env vars, EmailJS will use it.
+  // This is recommended for server-side usage.
+  if (accessToken) {
+    emailjsBody.accessToken = accessToken;
+  }
+
   try {
     const res = await fetch(EMAILJS_SEND_ENDPOINT, {
       method: "POST",
@@ -120,6 +127,7 @@ exports.handler = async (event) => {
         ok: false,
         error: "Email provider error",
         status: res.status,
+        details: details ? details.slice(0, 500) : "",
       });
     }
 

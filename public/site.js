@@ -195,3 +195,55 @@
     io.observe(el);
   });
 })();
+
+
+
+(function initPortfolioFiltering() {
+  const filters = document.getElementById("portfolioFilters");
+  const grid = document.getElementById("portfolioGrid");
+  if (!filters || !grid) return; // only runs on portfolio page
+
+  const buttons = Array.from(filters.querySelectorAll("[data-filter]"));
+  const items = Array.from(grid.querySelectorAll(".portfolio-item[data-category]"));
+
+  const setActiveButton = (activeFilter) => {
+    buttons.forEach((btn) => {
+      const isActive = btn.dataset.filter === activeFilter;
+      btn.setAttribute("aria-pressed", String(isActive));
+
+      // active style
+      btn.classList.toggle("bg-[#00a6eb]", isActive);
+      btn.classList.toggle("text-white", isActive);
+
+      // inactive style
+      btn.classList.toggle("bg-white/5", !isActive);
+      btn.classList.toggle("text-white/80", !isActive);
+    });
+  };
+
+  const applyFilter = (filter) => {
+    const f = (filter || "all").toLowerCase();
+    items.forEach((el) => {
+      const categories = (el.dataset.category || "")
+        .toLowerCase()
+        .split(/\s+/)
+        .filter(Boolean);
+
+      const show = f === "all" || categories.includes(f);
+      el.classList.toggle("hidden", !show); // Tailwind "hidden" => display:none
+    });
+
+    setActiveButton(f);
+  };
+
+  filters.addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-filter]");
+    if (!btn) return;
+    applyFilter(btn.dataset.filter);
+  });
+
+  // default: All
+  applyFilter("all");
+})();
+
+

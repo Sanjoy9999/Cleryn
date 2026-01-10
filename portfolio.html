@@ -295,36 +295,63 @@
 
       <section class="py-14" data-reveal>
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div class="flex flex-wrap items-center gap-2">
+          <div class="flex flex-wrap items-center gap-2" id="portfolioFilters">
             <button
-              class="rounded-full bg-white/5 ring-soft px-4 py-2 text-sm font-semibold card-hover"
+              type="button"
+              data-filter="all"
+              aria-pressed="true"
+              class="filter-btn rounded-full bg-[#00a6eb] px-4 py-2 text-sm font-semibold text-white ring-soft card-hover"
             >
               All
             </button>
+
             <button
-              class="rounded-full bg-white/5 ring-soft px-4 py-2 text-sm font-semibold text-white/80 hover:text-white transition card-hover"
+              type="button"
+              data-filter="web"
+              aria-pressed="false"
+              class="filter-btn rounded-full bg-white/5 px-4 py-2 text-sm font-semibold text-white/80 hover:text-white transition ring-soft card-hover"
             >
               Web
             </button>
+
             <button
-              class="rounded-full bg-white/5 ring-soft px-4 py-2 text-sm font-semibold text-white/80 hover:text-white transition card-hover"
+              type="button"
+              data-filter="mobile"
+              aria-pressed="false"
+              class="filter-btn rounded-full bg-white/5 px-4 py-2 text-sm font-semibold text-white/80 hover:text-white transition ring-soft card-hover"
             >
               Mobile
             </button>
+
             <button
-              class="rounded-full bg-white/5 ring-soft px-4 py-2 text-sm font-semibold text-white/80 hover:text-white transition card-hover"
+              type="button"
+              data-filter="enterprise"
+              aria-pressed="false"
+              class="filter-btn rounded-full bg-white/5 px-4 py-2 text-sm font-semibold text-white/80 hover:text-white transition ring-soft card-hover"
             >
               Enterprise
             </button>
+
             <button
-              class="rounded-full bg-white/5 ring-soft px-4 py-2 text-sm font-semibold text-white/80 hover:text-white transition card-hover"
+              type="button"
+              data-filter="ecommerce"
+              aria-pressed="false"
+              class="filter-btn rounded-full bg-white/5 px-4 py-2 text-sm font-semibold text-white/80 hover:text-white transition ring-soft card-hover"
             >
               eCommerce
             </button>
           </div>
 
-          <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            <a href="https://quickbite.dedyn.io" target="_blank">
+          <div
+            class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-5"
+            id="portfolioGrid"
+          >
+            <a
+              href="https://quickbite.dedyn.io"
+              target="_blank"
+              class="portfolio-item"
+              data-category="ecommerce"
+            >
               <article
                 class="rounded-3xl bg-white/5 ring-soft overflow-hidden card-hover"
               >
@@ -344,29 +371,29 @@
                     class="text-sm font-semibold text-[#00a6eb] inline-flex items-center gap-2"
                   >
                     <svg
-                    class="h-4 w-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M6 6h15l-1.5 8h-12L6 6z"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M6 6l-2-2"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                    />
-                    <path
-                      d="M9 20a1 1 0 110-2 1 1 0 010 2zM18 20a1 1 0 110-2 1 1 0 010 2z"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    />
-                  </svg>
+                      class="h-4 w-4"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M6 6h15l-1.5 8h-12L6 6z"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M6 6l-2-2"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M9 20a1 1 0 110-2 1 1 0 010 2zM18 20a1 1 0 110-2 1 1 0 010 2z"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      />
+                    </svg>
                     E-Commerce
                   </div>
                   <h2 class="mt-2 text-lg font-extrabold">QuickBite</h2>
@@ -377,7 +404,12 @@
               </article>
             </a>
 
-            <a href="https://techkart.dedyn.io" target="_blank">
+            <a
+              href="https://techkart.dedyn.io"
+              target="_blank"
+              class="portfolio-item"
+              data-category="ecommerce"
+            >
               <article
                 class="rounded-3xl bg-white/5 ring-soft overflow-hidden card-hover"
               >
@@ -397,29 +429,29 @@
                     class="text-sm font-semibold text-[#00a6eb] inline-flex items-center gap-2"
                   >
                     <svg
-                    class="h-4 w-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M6 6h15l-1.5 8h-12L6 6z"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M6 6l-2-2"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                    />
-                    <path
-                      d="M9 20a1 1 0 110-2 1 1 0 010 2zM18 20a1 1 0 110-2 1 1 0 010 2z"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    />
-                  </svg>
+                      class="h-4 w-4"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M6 6h15l-1.5 8h-12L6 6z"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M6 6l-2-2"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M9 20a1 1 0 110-2 1 1 0 010 2zM18 20a1 1 0 110-2 1 1 0 010 2z"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      />
+                    </svg>
                     E-Commerce
                   </div>
                   <h2 class="mt-2 text-lg font-extrabold">Techkart</h2>
@@ -431,7 +463,12 @@
               </article>
             </a>
 
-            <a href="https://grihonirmanrealty.in/" target="_blank">
+            <a
+              href="https://grihonirmanrealty.in/"
+              target="_blank"
+              class="portfolio-item"
+              data-category="web"
+            >
               <article
                 class="rounded-3xl bg-white/5 ring-soft overflow-hidden card-hover"
               >
@@ -479,7 +516,12 @@
               </article>
             </a>
 
-            <a href="https://www.banglaff.fun/" target="_blank">
+            <a
+              href="https://www.banglaff.fun/"
+              target="_blank"
+              class="portfolio-item"
+              data-category="web"
+            >
               <article
                 class="rounded-3xl bg-white/5 ring-soft overflow-hidden card-hover"
               >
@@ -529,6 +571,8 @@
             <a
               href="https://interview-prep-ai-rust-nine.vercel.app/"
               target="_blank"
+              class="portfolio-item"
+              data-category="web enterprise"
             >
               <article
                 class="rounded-3xl bg-white/5 ring-soft overflow-hidden card-hover"
@@ -579,6 +623,8 @@
             <a
               href="https://gepo-website-jis-group.great-site.net/"
               target="_blank"
+              class="portfolio-item"
+              data-category="web"
             >
               <article
                 class="rounded-3xl bg-white/5 ring-soft overflow-hidden card-hover"
@@ -598,7 +644,7 @@
                   <div
                     class="text-sm font-semibold text-[#00a6eb] inline-flex items-center gap-2"
                   >
-                   <svg
+                    <svg
                       class="h-4 w-4"
                       viewBox="0 0 24 24"
                       fill="none"
@@ -628,7 +674,8 @@
             </a>
 
             <article
-              class="rounded-3xl bg-white/5 ring-soft overflow-hidden card-hover"
+              class="portfolio-item rounded-3xl bg-white/5 ring-soft overflow-hidden card-hover"
+              data-category="web enterprise"
             >
               <div
                 class="h-52 bg-gradient-to-r from-[#023b6d]/70 to-[#00a6eb]/20"
@@ -646,23 +693,19 @@
                   class="text-sm font-semibold text-[#00a6eb] inline-flex items-center gap-2"
                 >
                   <svg
-                      class="h-4 w-4"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M4 5h16v14H4V5z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M4 9h16"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                    </svg>
+                    class="h-4 w-4"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M4 5h16v14H4V5z"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linejoin="round"
+                    />
+                    <path d="M4 9h16" stroke="currentColor" stroke-width="2" />
+                  </svg>
                   Web
                 </div>
                 <h2 class="mt-2 text-lg font-extrabold">PDF Analyzer</h2>
@@ -673,7 +716,8 @@
             </article>
 
             <article
-              class="rounded-3xl bg-white/5 ring-soft overflow-hidden card-hover"
+              class="portfolio-item rounded-3xl bg-white/5 ring-soft overflow-hidden card-hover"
+              data-category="web"
             >
               <div
                 class="h-52 bg-gradient-to-r from-[#023b6d]/70 to-[#00a6eb]/20"
@@ -691,23 +735,19 @@
                   class="text-sm font-semibold text-[#00a6eb] inline-flex items-center gap-2"
                 >
                   <svg
-                      class="h-4 w-4"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M4 5h16v14H4V5z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M4 9h16"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                    </svg>
+                    class="h-4 w-4"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M4 5h16v14H4V5z"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linejoin="round"
+                    />
+                    <path d="M4 9h16" stroke="currentColor" stroke-width="2" />
+                  </svg>
                   Web
                 </div>
                 <h2 class="mt-2 text-lg font-extrabold">Task Manager</h2>

@@ -264,7 +264,19 @@
 
     <!-- Hero -->
     <main class="pt-16">
-      <section class="hero-bg" data-reveal>
+      <section class="hero-bg relative overflow-hidden" data-reveal>
+        <!-- GIF background layer -->
+        <div class="absolute inset-0 -z-10" aria-hidden="true">
+          <img
+            src="public/images/HomePageGif.gif"
+            alt=""
+            class="h-full w-full object-cover object-center opacity-20 sm:opacity-25 lg:opacity-35"
+          />
+          <!-- <div
+            class="absolute inset-0 bg-[#0b1220]/55 sm:bg-[#0b1220]/60"
+          ></div> -->
+        </div>
+
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
           <div class="grid lg:grid-cols-2 gap-10 items-center">
             <div>
@@ -716,7 +728,7 @@
           <div
             class="rounded-3xl bg-gradient-to-r from-[#023b6d]/60 to-[#00a6eb]/25 ring-soft p-8 lg:p-10"
           >
-            <div class="grid lg:grid-cols-2 gap-10 items-center">
+            <div class="grid lg:grid-cols-2 gap-10">
               <div>
                 <h2
                   class="text-2xl sm:text-3xl font-extrabold flex items-center gap-3"
